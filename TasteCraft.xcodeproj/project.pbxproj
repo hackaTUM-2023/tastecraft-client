@@ -16,6 +16,8 @@
 		B9384AB02B08DA27008EF73D /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AAF2B08DA27008EF73D /* RecipeViewModel.swift */; };
 		B9384AB22B08E4E9008EF73D /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB12B08E4E9008EF73D /* Tag.swift */; };
 		B9384AB42B093E96008EF73D /* RecipeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB32B093E96008EF73D /* RecipeTile.swift */; };
+		B9384AB72B096DFD008EF73D /* TasteCraftServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB62B096DFD008EF73D /* TasteCraftServerClient.swift */; };
+		B9384AB92B096E8F008EF73D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB82B096E8F008EF73D /* NetworkError.swift */; };
 		B9958B252B08B6690016C3EF /* TasteCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9958B242B08B6690016C3EF /* TasteCraftApp.swift */; };
 		B9958B272B08B6690016C3EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9958B262B08B6690016C3EF /* ContentView.swift */; };
 		B9958B292B08B66C0016C3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9958B282B08B66C0016C3EF /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		B9384AAF2B08DA27008EF73D /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		B9384AB12B08E4E9008EF73D /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		B9384AB32B093E96008EF73D /* RecipeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTile.swift; sourceTree = "<group>"; };
+		B9384AB62B096DFD008EF73D /* TasteCraftServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteCraftServerClient.swift; sourceTree = "<group>"; };
+		B9384AB82B096E8F008EF73D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B9958B212B08B6690016C3EF /* TasteCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9958B242B08B6690016C3EF /* TasteCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteCraftApp.swift; sourceTree = "<group>"; };
 		B9958B262B08B6690016C3EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B9384AB52B096DDC008EF73D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B9384AB62B096DFD008EF73D /* TasteCraftServerClient.swift */,
+				B9384AB82B096E8F008EF73D /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		B9958B182B08B6690016C3EF = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +146,7 @@
 		B9958B232B08B6690016C3EF /* TasteCraft */ = {
 			isa = PBXGroup;
 			children = (
+				B9384AB52B096DDC008EF73D /* Networking */,
 				B9958B282B08B66C0016C3EF /* Assets.xcassets */,
 				B9384A9B2B08CF7D008EF73D /* Model */,
 				B9384AA92B08D1EF008EF73D /* ViewModel */,
@@ -286,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA3878F2B092394003E71F3 /* View.swift in Sources */,
+				B9384AB92B096E8F008EF73D /* NetworkError.swift in Sources */,
 				B9384AA02B08CF7D008EF73D /* Ingredient.swift in Sources */,
 				B9384AB02B08DA27008EF73D /* RecipeViewModel.swift in Sources */,
 				B9384AB42B093E96008EF73D /* RecipeTile.swift in Sources */,
@@ -297,6 +312,7 @@
 				B9958B272B08B6690016C3EF /* ContentView.swift in Sources */,
 				BDA3878C2B09184E003E71F3 /* LaunchScreenStateManager.swift in Sources */,
 				B9384AA82B08D083008EF73D /* RecipeOverview.swift in Sources */,
+				B9384AB72B096DFD008EF73D /* TasteCraftServerClient.swift in Sources */,
 				B9384AAB2B08D22D008EF73D /* RecipesViewModel.swift in Sources */,
 				B9958B252B08B6690016C3EF /* TasteCraftApp.swift in Sources */,
 			);
