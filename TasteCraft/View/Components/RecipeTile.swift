@@ -25,6 +25,7 @@ struct RecipeTile: View {
                         .cornerRadius(15)
                 } placeholder: {
                     ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color("HelloFresh Green Light")))
                 }
             )
             .padding(10)

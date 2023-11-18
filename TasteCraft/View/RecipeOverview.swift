@@ -67,6 +67,7 @@ struct RecipeOverview: View {
                             .inset(by: 1)
                             .stroke(Color(red: 0.62, green: 0.62, blue: 0.62).opacity(0.15), lineWidth: 2)
                     )
+                    .padding(.horizontal, 20)
                 
                 if searchQuery.isEmpty {
                     ScrollView {
@@ -79,6 +80,7 @@ struct RecipeOverview: View {
                                   )
                                   .foregroundColor(Color("Black"))
                                   .frame(alignment: .topLeading)
+                                  .padding(.horizontal, 20)
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     LazyHStack {
                                         ForEach(filteredResults, id: \.self) { recipe in
@@ -86,8 +88,8 @@ struct RecipeOverview: View {
                                                 RecipeDetailsView()
                                                     .environmentObject(RecipeViewModel(recipe: recipe))
                                             } label: {
-                                                RecipeTile(recipe: recipe)
-                                            }.frame(width: 120)
+                                                RecipeTile(recipe: recipe).padding(.leading, 20)
+                                            }
                                         }
                                     }
                                 }
@@ -102,6 +104,7 @@ struct RecipeOverview: View {
                                   )
                                   .foregroundColor(Color("Black"))
                                   .frame(alignment: .topLeading)
+                                  .padding(.horizontal, 20)
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     LazyHStack {
                                         ForEach(filteredResults, id: \.self) { recipe in
@@ -109,7 +112,7 @@ struct RecipeOverview: View {
                                                 RecipeDetailsView()
                                                     .environmentObject(RecipeViewModel(recipe: recipe))
                                             } label: {
-                                                RecipeTile(recipe: recipe)
+                                                RecipeTile(recipe: recipe).padding(.leading, 20)
                                             }
                                         }
                                     }
@@ -138,7 +141,6 @@ struct RecipeOverview: View {
                 }
             }
         }
-        .padding(.horizontal, 20)
         .onAppear() {
             filteredResults = recipesViewModel.recipes
         }
