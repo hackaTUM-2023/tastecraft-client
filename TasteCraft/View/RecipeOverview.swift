@@ -149,16 +149,166 @@ struct RecipeOverview: View {
 #Preview {
     var recipesViewModel = RecipesViewModel()
     recipesViewModel.recipes = [
-        Recipe(id: 1, title: "Savory Herb Chicken", description: "A delicious chicken dish seasoned with aromatic herbs.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .chicken, cookingTimeMin: 45, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 1, name: "Chicken"): 2, Ingredient(id: 2, name: "Rosemary"): 2, Ingredient(id: 3, name: "Thyme"): 1, Ingredient(id: 4, name: "Garlic"): 3, Ingredient(id: 5, name: "Olive oil"): 2]),
-        Recipe(id: 2, title: "Classic Margherita Pizza", description: "A classic pizza with fresh tomatoes, mozzarella, and basil.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .pizza, cookingTimeMin: 30, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 6, name: "Pizza dough"): 1, Ingredient(id: 7, name: "Tomato sauce"): 1/2, Ingredient(id: 8, name: "Fresh mozzarella"): 8, Ingredient(id: 9, name: "Basil leaves"): 1/4, Ingredient(id: 5, name: "Olive oil"): 1]),
-        Recipe(id: 3, title: "Vegan Quinoa Salad", description: "A refreshing salad with quinoa, avocado, and lemon dressing.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .vegan, cookingTimeMin: 20, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 10, name: "Quinoa"): 1, Ingredient(id: 11, name: "Avocado"): 1, Ingredient(id: 12, name: "Lemon"): 1, Ingredient(id: 13, name: "Olive oil"): 2, Ingredient(id: 14, name: "Salt"): 1/2]),
-        Recipe(id: 4, title: "Creamy Tomato Soup", description: "A rich and creamy tomato soup perfect for cold days.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .soup, cookingTimeMin: 35, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 15, name: "Tomato"): 5, Ingredient(id: 16, name: "Cream"): 1, Ingredient(id: 17, name: "Basil"): 1, Ingredient(id: 18, name: "Onion"): 1, Ingredient(id: 5, name: "Olive oil"): 2]),
-        Recipe(id: 5, title: "Spicy Beef Tacos", description: "Tasty tacos filled with spicy beef and fresh vegetables.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .mainCourse, cookingTimeMin: 25, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 19, name: "Beef"): 2, Ingredient(id: 20, name: "Taco shells"): 6, Ingredient(id: 21, name: "Lettuce"): 1, Ingredient(id: 22, name: "Tomato"): 2, Ingredient(id: 23, name: "Cheese"): 1]),
-        Recipe(id: 6, title: "Chocolate Chip Cookies", description: "Delicious homemade cookies with chocolate chips.",  image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .dessert, cookingTimeMin: 20, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 24, name: "Flour"): 2, Ingredient(id: 25, name: "Sugar"): 1, Ingredient(id: 26, name: "Chocolate chips"): 1, Ingredient(id: 27, name: "Butter"): 1, Ingredient(id: 2, name: "Eggs"): 2]),
-        Recipe(id: 7, title: "Grilled Salmon", description: "Perfectly grilled salmon with a lemon butter sauce.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .seaFood, cookingTimeMin: 30, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 28, name: "Salmon"): 2, Ingredient(id: 29, name: "Lemon"): 1, Ingredient(id: 30, name: "Butter"): 1, Ingredient(id: 31, name: "Garlic"): 2, Ingredient(id: 32, name: "Herbs"): 1]),
-        Recipe(id: 8, title: "Pasta Carbonara", description: "A classic Italian pasta dish with eggs, cheese, and bacon.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .pasta, cookingTimeMin: 25, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 33, name: "Pasta"): 1, Ingredient(id: 34, name: "Eggs"): 3, Ingredient(id: 35, name: "Bacon"): 1/2, Ingredient(id: 36, name: "Parmesan cheese"): 1/2, Ingredient(id: 37, name: "Black pepper"): 1]),
-        Recipe(id: 9, title: "Balsamic Glazed Steak", description: "Steak glazed with a balsamic reduction and herbs.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .steak, cookingTimeMin: 40, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 38, name: "Steak"): 2, Ingredient(id: 39, name: "Balsamic vinegar"): 1/4, Ingredient(id: 40, name: "Brown sugar"): 1/4, Ingredient(id: 41, name: "Garlic"): 2, Ingredient(id: 42, name: "Rosemary"): 1]),
-        Recipe(id: 10, title: "Banana Bread", description: "Moist and flavorful banana bread with nuts.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .bakery, cookingTimeMin: 60, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 43, name: "Banana"): 3, Ingredient(id: 24, name: "Flour"): 2, Ingredient(id: 25, name: "Sugar"): 1, Ingredient(id: 44, name: "Walnuts"): 1/2, Ingredient(id: 27, name: "Butter"): 1])
+        Recipe(
+                id: 1,
+                title: "Savory Herb Chicken",
+                description: "A delicious chicken dish seasoned with aromatic herbs.",
+                image: "https://image_url_1.png",
+                category: .chicken,
+                cookingTimeMin: 45,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 1, name: "Chicken"): Amount(value: 2, unit: "pieces"),
+                    Ingredient(id: 2, name: "Rosemary"): Amount(value: 2, unit: "sprigs"),
+                    Ingredient(id: 3, name: "Thyme"): Amount(value: 1, unit: "sprig"),
+                    Ingredient(id: 4, name: "Garlic"): Amount(value: 3, unit: "cloves"),
+                    Ingredient(id: 5, name: "Olive oil"): Amount(value: 2, unit: "tablespoons")
+                ]
+            ),
+            Recipe(
+                id: 2,
+                title: "Classic Margherita Pizza",
+                description: "A classic pizza with fresh tomatoes, mozzarella, and basil.",
+                image: "https://image_url_2.png",
+                category: .pizza,
+                cookingTimeMin: 30,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 6, name: "Pizza dough"): Amount(value: 1, unit: "piece"),
+                    Ingredient(id: 7, name: "Tomato sauce"): Amount(value: 0.5, unit: "cup"),
+                    Ingredient(id: 8, name: "Fresh mozzarella"): Amount(value: 8, unit: "ounces"),
+                    Ingredient(id: 9, name: "Basil leaves"): Amount(value: 0.25, unit: "cup"),
+                    Ingredient(id: 5, name: "Olive oil"): Amount(value: 1, unit: "tablespoon")
+                ]
+            ),
+        Recipe(
+                id: 3,
+                title: "Vegan Quinoa Salad",
+                description: "A refreshing salad with quinoa, avocado, and lemon dressing.",
+                image: "https://image_url_3.png",
+                category: .vegan,
+                cookingTimeMin: 20,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 10, name: "Quinoa"): Amount(value: 1, unit: "cup"),
+                    Ingredient(id: 11, name: "Avocado"): Amount(value: 1, unit: "whole"),
+                    Ingredient(id: 12, name: "Lemon"): Amount(value: 1, unit: "whole"),
+                    Ingredient(id: 13, name: "Olive oil"): Amount(value: 2, unit: "tablespoons"),
+                    Ingredient(id: 14, name: "Salt"): Amount(value: 0.5, unit: "teaspoon")
+                ]
+            ),
+        Recipe(
+                id: 4,
+                title: "Creamy Tomato Soup",
+                description: "A rich and creamy tomato soup perfect for cold days.",
+                image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+                category: .soup,
+                cookingTimeMin: 35,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 15, name: "Tomato"): Amount(value: 5, unit: "whole"),
+                    Ingredient(id: 16, name: "Cream"): Amount(value: 1, unit: "cup"),
+                    Ingredient(id: 17, name: "Basil"): Amount(value: 1, unit: "tablespoon"),
+                    Ingredient(id: 18, name: "Onion"): Amount(value: 1, unit: "whole"),
+                    Ingredient(id: 5, name: "Olive oil"): Amount(value: 2, unit: "tablespoons")
+                ]
+            ),
+            Recipe(
+                id: 5,
+                title: "Spicy Beef Tacos",
+                description: "Tasty tacos filled with spicy beef and fresh vegetables.",
+                image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+                category: .mainCourse,
+                cookingTimeMin: 25,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 19, name: "Beef"): Amount(value: 2, unit: "pounds"),
+                    Ingredient(id: 20, name: "Taco shells"): Amount(value: 6, unit: "pieces"),
+                    Ingredient(id: 21, name: "Lettuce"): Amount(value: 1, unit: "head"),
+                    Ingredient(id: 22, name: "Tomato"): Amount(value: 2, unit: "whole"),
+                    Ingredient(id: 23, name: "Cheese"): Amount(value: 1, unit: "cup")
+                ]
+            ),
+            Recipe(
+                id: 6,
+                title: "Chocolate Chip Cookies",
+                description: "Delicious homemade cookies with chocolate chips.",
+                image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+                category: .dessert,
+                cookingTimeMin: 20,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 24, name: "Flour"): Amount(value: 2, unit: "cups"),
+                    Ingredient(id: 25, name: "Sugar"): Amount(value: 1, unit: "cup"),
+                    Ingredient(id: 26, name: "Chocolate chips"): Amount(value: 1, unit: "cup"),
+                    Ingredient(id: 27, name: "Butter"): Amount(value: 1, unit: "cup"),
+                    Ingredient(id: 2, name: "Eggs"): Amount(value: 2, unit: "pieces")
+                ]
+            ),
+        Recipe(
+                id: 7,
+                title: "Grilled Salmon",
+                description: "Perfectly grilled salmon with a lemon butter sauce.",
+                image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+                category: .seaFood,
+                cookingTimeMin: 30,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 28, name: "Salmon"): Amount(value: 2, unit: "fillets"),
+                    Ingredient(id: 29, name: "Lemon"): Amount(value: 1, unit: "whole"),
+                    Ingredient(id: 30, name: "Butter"): Amount(value: 1, unit: "tablespoon"),
+                    Ingredient(id: 31, name: "Garlic"): Amount(value: 2, unit: "cloves"),
+                    Ingredient(id: 32, name: "Herbs"): Amount(value: 1, unit: "tablespoon")
+                ]
+            ),
+            Recipe(
+                id: 8,
+                title: "Pasta Carbonara",
+                description: "A classic Italian pasta dish with eggs, cheese, and bacon.",
+                image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+                category: .pasta,
+                cookingTimeMin: 25,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 33, name: "Pasta"): Amount(value: 1, unit: "pound"),
+                    Ingredient(id: 34, name: "Eggs"): Amount(value: 3, unit: "whole"),
+                    Ingredient(id: 35, name: "Bacon"): Amount(value: 0.5, unit: "pound"),
+                    Ingredient(id: 36, name: "Parmesan cheese"): Amount(value: 0.5, unit: "cup"),
+                    Ingredient(id: 37, name: "Black pepper"): Amount(value: 1, unit: "teaspoon")
+                ]
+            ),
+            Recipe(
+                id: 9,
+                title: "Balsamic Glazed Steak",
+                description: "Steak glazed with a balsamic reduction and herbs.",
+                image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+                category: .steak,
+                cookingTimeMin: 40,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 38, name: "Steak"): Amount(value: 2, unit: "pieces"),
+                    Ingredient(id: 39, name: "Balsamic vinegar"): Amount(value: 0.25, unit: "cup"),
+                    Ingredient(id: 40, name: "Brown sugar"): Amount(value: 0.25, unit: "cup"),
+                    Ingredient(id: 41, name: "Garlic"): Amount(value: 2, unit: "cloves"),
+                    Ingredient(id: 42, name: "Rosemary"): Amount(value: 1, unit: "tablespoon")
+                ]
+            ),
+            Recipe(
+                id: 10,
+                title: "Banana Bread",
+                description: "Moist and flavorful banana bread with nuts.",
+                image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+                category: .bakery,
+                cookingTimeMin: 60,
+                requiredSkillLevel: "Beginner",
+                ingredients: [
+                    Ingredient(id: 43, name: "Banana"): Amount(value: 3, unit: "whole"),
+                    Ingredient(id: 24, name: "Flour"): Amount(value: 2, unit: "cups"),
+                    Ingredient(id: 25, name: "Sugar"): Amount(value: 1, unit: "cup"),
+                    Ingredient(id: 44, name: "Walnuts"): Amount(value: 0.5, unit: "cup"),
+                    Ingredient(id: 27, name: "Butter"): Amount(value: 1, unit: "cup")
+                ]
+            )
     ]
     
     return RecipeOverview()
