@@ -53,5 +53,5 @@ struct RecipeTile: View {
 }
 
 #Preview {
-    RecipeTile(recipe: Recipe(id: 7, title: "Grilled Salmon", description: "Perfectly grilled salmon with a lemon butter sauce.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .seaFood, cookingTimeMin: 30, ingredients: [Ingredient(id: 28, name: "Salmon"): 2, Ingredient(id: 29, name: "Lemon"): 1, Ingredient(id: 30, name: "Butter"): 1, Ingredient(id: 31, name: "Garlic"): 2, Ingredient(id: 32, name: "Herbs"): 1]))
+    RecipeTile(recipe: Recipe(id: 7, title: "Grilled Salmon", description: "Perfectly grilled salmon with a lemon butter sauce.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .seaFood, cookingTimeMin: 30, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 28, name: "Salmon"): 2, Ingredient(id: 29, name: "Lemon"): 1, Ingredient(id: 30, name: "Butter"): 1, Ingredient(id: 31, name: "Garlic"): 2, Ingredient(id: 32, name: "Herbs"): 1]))
 }
