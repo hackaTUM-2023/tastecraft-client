@@ -54,5 +54,20 @@ struct RecipeTile: View {
 }
 
 #Preview {
-    RecipeTile(recipe: Recipe(id: 7, title: "Grilled Salmon", description: "Perfectly grilled salmon with a lemon butter sauce.", image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png", category: .seaFood, cookingTimeMin: 30, requiredSkillLevel: "Beginner", ingredients: [Ingredient(id: 28, name: "Salmon"): 2, Ingredient(id: 29, name: "Lemon"): 1, Ingredient(id: 30, name: "Butter"): 1, Ingredient(id: 31, name: "Garlic"): 2, Ingredient(id: 32, name: "Herbs"): 1]))
+    RecipeTile(recipe:  Recipe(
+        id: 4,
+        title: "Creamy Tomato Soup",
+        description: "A rich and creamy tomato soup perfect for cold days.",
+        image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+        category: .soup,
+        cookingTimeMin: 35,
+        requiredSkillLevel: "Beginner",
+        ingredients: [
+            Ingredient(id: 15, name: "Tomato"): Amount(value: 5, unit: "whole"),
+            Ingredient(id: 16, name: "Cream"): Amount(value: 1, unit: "cup"),
+            Ingredient(id: 17, name: "Basil"): Amount(value: 1, unit: "tablespoon"),
+            Ingredient(id: 18, name: "Onion"): Amount(value: 1, unit: "whole"),
+            Ingredient(id: 5, name: "Olive oil"): Amount(value: 2, unit: "tablespoons")
+        ]
+    ))
 }

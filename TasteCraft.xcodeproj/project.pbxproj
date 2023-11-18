@@ -18,6 +18,7 @@
 		B9384AB42B093E96008EF73D /* RecipeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB32B093E96008EF73D /* RecipeTile.swift */; };
 		B9384AB72B096DFD008EF73D /* TasteCraftServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB62B096DFD008EF73D /* TasteCraftServerClient.swift */; };
 		B9384AB92B096E8F008EF73D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB82B096E8F008EF73D /* NetworkError.swift */; };
+		B9384ABB2B0974C4008EF73D /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384ABA2B0974C4008EF73D /* Amount.swift */; };
 		B9958B252B08B6690016C3EF /* TasteCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9958B242B08B6690016C3EF /* TasteCraftApp.swift */; };
 		B9958B272B08B6690016C3EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9958B262B08B6690016C3EF /* ContentView.swift */; };
 		B9958B292B08B66C0016C3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9958B282B08B66C0016C3EF /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		B9384AB32B093E96008EF73D /* RecipeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTile.swift; sourceTree = "<group>"; };
 		B9384AB62B096DFD008EF73D /* TasteCraftServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteCraftServerClient.swift; sourceTree = "<group>"; };
 		B9384AB82B096E8F008EF73D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B9384ABA2B0974C4008EF73D /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		B9958B212B08B6690016C3EF /* TasteCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9958B242B08B6690016C3EF /* TasteCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteCraftApp.swift; sourceTree = "<group>"; };
 		B9958B262B08B6690016C3EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				B9384A9C2B08CF7D008EF73D /* Recipe.swift */,
 				B9384A9D2B08CF7D008EF73D /* Ingredient.swift */,
 				B9384A9E2B08CF7D008EF73D /* Category.swift */,
+				B9384ABA2B0974C4008EF73D /* Amount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				B9384AA12B08CF7D008EF73D /* Category.swift in Sources */,
 				B9384A9F2B08CF7D008EF73D /* Recipe.swift in Sources */,
 				B9384AAE2B08D87A008EF73D /* RecipeDetailsView.swift in Sources */,
+				B9384ABB2B0974C4008EF73D /* Amount.swift in Sources */,
 				BDA3876A2B090FB0003E71F3 /* SplashScreen.swift in Sources */,
 				B9958B272B08B6690016C3EF /* ContentView.swift in Sources */,
 				BDA3878C2B09184E003E71F3 /* LaunchScreenStateManager.swift in Sources */,
