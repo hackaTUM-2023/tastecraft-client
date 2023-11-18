@@ -11,10 +11,11 @@
 		B9384AA02B08CF7D008EF73D /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384A9D2B08CF7D008EF73D /* Ingredient.swift */; };
 		B9384AA12B08CF7D008EF73D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384A9E2B08CF7D008EF73D /* Category.swift */; };
 		B9384AA82B08D083008EF73D /* RecipeOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AA72B08D083008EF73D /* RecipeOverview.swift */; };
-		B9384AAB2B08D22D008EF73D /* RecipiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AAA2B08D22D008EF73D /* RecipiesViewModel.swift */; };
+		B9384AAB2B08D22D008EF73D /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AAA2B08D22D008EF73D /* RecipesViewModel.swift */; };
 		B9384AAE2B08D87A008EF73D /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AAD2B08D87A008EF73D /* RecipeDetailsView.swift */; };
 		B9384AB02B08DA27008EF73D /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AAF2B08DA27008EF73D /* RecipeViewModel.swift */; };
 		B9384AB22B08E4E9008EF73D /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB12B08E4E9008EF73D /* Tag.swift */; };
+		B9384AB42B093E96008EF73D /* RecipeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9384AB32B093E96008EF73D /* RecipeTile.swift */; };
 		B9958B252B08B6690016C3EF /* TasteCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9958B242B08B6690016C3EF /* TasteCraftApp.swift */; };
 		B9958B272B08B6690016C3EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9958B262B08B6690016C3EF /* ContentView.swift */; };
 		B9958B292B08B66C0016C3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9958B282B08B66C0016C3EF /* Assets.xcassets */; };
@@ -43,10 +44,11 @@
 		B9384A9D2B08CF7D008EF73D /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		B9384A9E2B08CF7D008EF73D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B9384AA72B08D083008EF73D /* RecipeOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeOverview.swift; sourceTree = "<group>"; };
-		B9384AAA2B08D22D008EF73D /* RecipiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesViewModel.swift; sourceTree = "<group>"; };
+		B9384AAA2B08D22D008EF73D /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 		B9384AAD2B08D87A008EF73D /* RecipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsView.swift; sourceTree = "<group>"; };
 		B9384AAF2B08DA27008EF73D /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		B9384AB12B08E4E9008EF73D /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		B9384AB32B093E96008EF73D /* RecipeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTile.swift; sourceTree = "<group>"; };
 		B9958B212B08B6690016C3EF /* TasteCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9958B242B08B6690016C3EF /* TasteCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteCraftApp.swift; sourceTree = "<group>"; };
 		B9958B262B08B6690016C3EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 		B9384AA92B08D1EF008EF73D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B9384AAA2B08D22D008EF73D /* RecipiesViewModel.swift */,
+				B9384AAA2B08D22D008EF73D /* RecipesViewModel.swift */,
 				B9384AAF2B08DA27008EF73D /* RecipeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				B9384AB12B08E4E9008EF73D /* Tag.swift */,
+				B9384AB32B093E96008EF73D /* RecipeTile.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				BDA3878F2B092394003E71F3 /* View.swift in Sources */,
 				B9384AA02B08CF7D008EF73D /* Ingredient.swift in Sources */,
 				B9384AB02B08DA27008EF73D /* RecipeViewModel.swift in Sources */,
+				B9384AB42B093E96008EF73D /* RecipeTile.swift in Sources */,
 				B9384AB22B08E4E9008EF73D /* Tag.swift in Sources */,
 				B9384AA12B08CF7D008EF73D /* Category.swift in Sources */,
 				B9384A9F2B08CF7D008EF73D /* Recipe.swift in Sources */,
@@ -293,7 +297,7 @@
 				B9958B272B08B6690016C3EF /* ContentView.swift in Sources */,
 				BDA3878C2B09184E003E71F3 /* LaunchScreenStateManager.swift in Sources */,
 				B9384AA82B08D083008EF73D /* RecipeOverview.swift in Sources */,
-				B9384AAB2B08D22D008EF73D /* RecipiesViewModel.swift in Sources */,
+				B9384AAB2B08D22D008EF73D /* RecipesViewModel.swift in Sources */,
 				B9958B252B08B6690016C3EF /* TasteCraftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
