@@ -35,7 +35,11 @@
 		BDA387872B09138A003E71F3 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA3876C2B09111F003E71F3 /* Montserrat-ExtraBoldItalic.ttf */; };
 		BDA387882B09138A003E71F3 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA387722B09111F003E71F3 /* Montserrat-Medium.ttf */; };
 		BDA3878C2B09184E003E71F3 /* LaunchScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3878B2B09184E003E71F3 /* LaunchScreenStateManager.swift */; };
-		BDA3878F2B092394003E71F3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3878E2B092394003E71F3 /* View.swift */; };
+		BDA387922B092C86003E71F3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA387912B092C86003E71F3 /* OnboardingView.swift */; };
+		BDA387952B0930FE003E71F3 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = BDA387942B0930FE003E71F3 /* WrappingHStack */; };
+		BDA387972B093FFA003E71F3 /* TagInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA387962B093FFA003E71F3 /* TagInput.swift */; };
+		BDA387992B096B18003E71F3 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA387982B096B18003E71F3 /* CustomButtonStyle.swift */; };
+		BDA3879C2B0975D3003E71F3 /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3879B2B0975D3003E71F3 /* OnboardingStep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +72,10 @@
 		BDA387782B09111F003E71F3 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		BDA387792B09111F003E71F3 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		BDA3878B2B09184E003E71F3 /* LaunchScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStateManager.swift; sourceTree = "<group>"; };
-		BDA3878E2B092394003E71F3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		BDA387912B092C86003E71F3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BDA387962B093FFA003E71F3 /* TagInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagInput.swift; sourceTree = "<group>"; };
+		BDA387982B096B18003E71F3 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		BDA3879B2B0975D3003E71F3 /* OnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA387952B0930FE003E71F3 /* WrappingHStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,8 @@
 				B9384AA72B08D083008EF73D /* RecipeOverview.swift */,
 				B9384AAD2B08D87A008EF73D /* RecipeDetailsView.swift */,
 				BDA387692B090FB0003E71F3 /* SplashScreen.swift */,
+				BDA387912B092C86003E71F3 /* OnboardingView.swift */,
+				BDA3879B2B0975D3003E71F3 /* OnboardingStep.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,8 +145,8 @@
 				B9384A9B2B08CF7D008EF73D /* Model */,
 				B9384AA92B08D1EF008EF73D /* ViewModel */,
 				B9384AA22B08CF93008EF73D /* View */,
+				BDA3879A2B096EE6003E71F3 /* Styles */,
 				BDA387892B09182D003E71F3 /* Util */,
-				BDA3878D2B092387003E71F3 /* Extensions */,
 				BDA3876B2B0910DA003E71F3 /* Fonts */,
 				B9958B242B08B6690016C3EF /* TasteCraftApp.swift */,
 				B9958B262B08B6690016C3EF /* ContentView.swift */,
@@ -182,20 +192,21 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		BDA3878D2B092387003E71F3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BDA3878E2B092394003E71F3 /* View.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		BDA387902B0924B1003E71F3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				B9384AB12B08E4E9008EF73D /* Tag.swift */,
+				BDA387962B093FFA003E71F3 /* TagInput.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		BDA3879A2B096EE6003E71F3 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				BDA387982B096B18003E71F3 /* CustomButtonStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,9 @@
 			dependencies = (
 			);
 			name = TasteCraft;
+			packageProductDependencies = (
+				BDA387942B0930FE003E71F3 /* WrappingHStack */,
+			);
 			productName = TasteCraft;
 			productReference = B9958B212B08B6690016C3EF /* TasteCraft.app */;
 			productType = "com.apple.product-type.application";
@@ -242,6 +256,9 @@
 				Base,
 			);
 			mainGroup = B9958B182B08B6690016C3EF;
+			packageReferences = (
+				BDA387932B0930FE003E71F3 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+			);
 			productRefGroup = B9958B222B08B6690016C3EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDA3878F2B092394003E71F3 /* View.swift in Sources */,
 				B9384AA02B08CF7D008EF73D /* Ingredient.swift in Sources */,
 				B9384AB02B08DA27008EF73D /* RecipeViewModel.swift in Sources */,
 				B9384AB22B08E4E9008EF73D /* Tag.swift in Sources */,
@@ -293,8 +309,12 @@
 				B9958B272B08B6690016C3EF /* ContentView.swift in Sources */,
 				BDA3878C2B09184E003E71F3 /* LaunchScreenStateManager.swift in Sources */,
 				B9384AA82B08D083008EF73D /* RecipeOverview.swift in Sources */,
+				BDA387992B096B18003E71F3 /* CustomButtonStyle.swift in Sources */,
 				B9384AAB2B08D22D008EF73D /* RecipiesViewModel.swift in Sources */,
+				BDA387972B093FFA003E71F3 /* TagInput.swift in Sources */,
 				B9958B252B08B6690016C3EF /* TasteCraftApp.swift in Sources */,
+				BDA3879C2B0975D3003E71F3 /* OnboardingStep.swift in Sources */,
+				BDA387922B092C86003E71F3 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +523,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDA387932B0930FE003E71F3 /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dkk/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDA387942B0930FE003E71F3 /* WrappingHStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDA387932B0930FE003E71F3 /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			productName = WrappingHStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9958B192B08B6690016C3EF /* Project object */;
 }

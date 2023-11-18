@@ -26,10 +26,7 @@ struct Tag: View {
                     .foregroundColor(
                         Color(isActive ? "HelloFresh Green Dark" : "Black")
                     )
-                    .if(!isActive) { view in
-                        view
-                            .labelStyle(.titleOnly)
-                    }
+                    .labelStyle(.titleOnly)
             }
             .padding(.horizontal, 15)
             .padding(.vertical, 10)
