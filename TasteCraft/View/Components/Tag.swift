@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Tag: View {
     @State var isActive: Bool = false
+    var disabled: Bool?
     
     var label: String
     
