@@ -21,18 +21,17 @@ struct RecipeOverview: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack(spacing: 20) {
-                    Text("Hey,\nMax Mustermann")
+                HStack(alignment: .center, spacing: 20) {
+                    Text("Hey,\nBenedikt Geisberger")
                         .font(
                             Font
-                                .custom("Montserrat", size: 24)
+                                .custom("Montserrat", size: 22)
                                 .weight(.bold)
                         )
-                        .padding(.top, 20)
                         .frame(width: 248, alignment: .topLeading)
                     Circle()
                         .fill(Color("HelloFresh Green Light"))
-                        .frame(height: 60)
+                        .frame(height: 42)
                 }
                 
                 // Search Bar
@@ -118,7 +117,7 @@ struct RecipeOverview: View {
                                     }
                                 }
                             }
-                    }
+                    }.padding(.vertical, 20)
                 } else {
                     ZStack(alignment: .bottom) {
                         ScrollView {
