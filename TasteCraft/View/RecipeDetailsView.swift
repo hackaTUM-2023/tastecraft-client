@@ -21,7 +21,7 @@ struct RecipeDetailsView: View {
     }
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 20) {
                 // Image
                 Rectangle()
@@ -94,7 +94,7 @@ struct RecipeDetailsView: View {
                           .foregroundColor(Color("Black"))
                           .frame(alignment: .top)
                     }
-                }.padding(.bottom, 20)
+                }
                 
                 // Description
                 Tag(isActive: true, disabled: true, label: "Description")
