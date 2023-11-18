@@ -35,8 +35,6 @@ struct RecipeOverview: View {
                                 .padding(20)
                                 .background(
                                     RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color.gray)
-                                        .fill(.green.opacity(0.3))
                                         .cornerRadius(15)
                                         .frame(width: 100, height: 150)
                                 )
