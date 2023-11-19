@@ -11,8 +11,10 @@ struct Recipe: Codable, Identifiable, Hashable {
     var id: Int
     var title: String
     var description: String
+    var image: String
     var category: Category
 
     var cookingTimeMin: Int
-    var ingredients: [Ingredient: Int]
+    var requiredSkillLevel: String
+    var ingredients: [Ingredient: Amount]
 }
