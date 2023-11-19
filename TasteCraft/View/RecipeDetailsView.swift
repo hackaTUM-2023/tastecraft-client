@@ -28,16 +28,12 @@ struct RecipeDetailsView: View {
                   .foregroundColor(.clear)
                   .frame(width: 250, height: 250)
                   .background(
-                    AsyncImage(url: URL(string: recipeViewModel.recipe.image)) { image in
-                        image
+                    Image(recipeViewModel.recipe.image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 250, height: 250)
                             .clipped()
                             .cornerRadius(15)
-                    } placeholder: {
-                        ProgressView()
-                    }
                   )
                   .shadow(color: .black.opacity(0.15), radius: 12.5, x: 0, y: 4)
                 

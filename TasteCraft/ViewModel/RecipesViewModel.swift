@@ -9,4 +9,8 @@ import Foundation
 
 class RecipesViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
+    
+    init() {
+        self.recipes = mock_recipes
+    }
 }

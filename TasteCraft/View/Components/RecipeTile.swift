@@ -16,17 +16,12 @@ struct RecipeTile: View {
             .foregroundColor(.clear)
             .frame(width: 120, height: 120)
             .background(
-                AsyncImage(url: URL(string: recipe.image)) { image in
-                    image
+                Image(recipe.image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 120)
                         .clipped()
                         .cornerRadius(15)
-                } placeholder: {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: Color("HelloFresh Green Light")))
-                }
             )
             .padding(10)
             
@@ -58,7 +53,7 @@ struct RecipeTile: View {
         id: 4,
         title: "Creamy Tomato Soup",
         description: "A rich and creamy tomato soup perfect for cold days.",
-        image: "https://static.lieferando.de/images/restaurants/de/RQQQ3NQN/products/20220217-_dsc3462_tuna_bowl.png",
+        image: "paccheri",
         category: .soup,
         cookingTimeMin: 35,
         requiredSkillLevel: "Beginner",

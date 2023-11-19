@@ -20,9 +20,8 @@ struct ContentView: View {
                     self.launchScreenState.dismiss()
                 }
         } else {
-            Text("HomeView")
+            RecipeOverview().environmentObject(RecipesViewModel())
         }
-        
     }
 }
 

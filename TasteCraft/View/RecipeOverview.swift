@@ -31,6 +31,7 @@ struct RecipeOverview: View {
                         .frame(width: 248, alignment: .topLeading)
                     Circle()
                         .fill(Color("HelloFresh Green Light"))
+                        .overlay(Image(systemName: "person.fill"))
                         .frame(height: 42)
                 }
                 
@@ -153,7 +154,7 @@ struct RecipeOverview: View {
                 id: 1,
                 title: "Savory Herb Chicken",
                 description: "A delicious chicken dish seasoned with aromatic herbs.",
-                image: "https://image_url_1.png",
+                image: "patatas",
                 category: .chicken,
                 cookingTimeMin: 45,
                 requiredSkillLevel: "Beginner",
