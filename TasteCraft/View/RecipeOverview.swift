@@ -20,7 +20,7 @@ struct RecipeOverview: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 20) {
                 HStack(alignment: .center, spacing: 20) {
                     Text("Hey,\nBenedikt Geisberger")
                         .font(
@@ -30,10 +30,11 @@ struct RecipeOverview: View {
                         )
                         .frame(width: 248, alignment: .topLeading)
                     Circle()
-                        .fill(Color("HelloFresh Green Light"))
-                        .overlay(Image(systemName: "person.fill"))
+                        .fill(Color("HelloFresh Green Light").opacity(0.25))
+                        .overlay(Text("👨‍🍳").font(.system(size: 25)))
                         .frame(height: 42)
                 }
+                .padding(.bottom, 20)
                 
                 // Search Bar
                 HStack {
@@ -94,6 +95,7 @@ struct RecipeOverview: View {
                                     }
                                 }
                             }
+                        .padding(.bottom, 20)
                             
                             // Most Popular
                             VStack(alignment: .leading) {

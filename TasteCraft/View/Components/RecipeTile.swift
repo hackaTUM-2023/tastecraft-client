@@ -11,7 +11,7 @@ struct RecipeTile: View {
     var recipe: Recipe
     
     var body: some View {
-        VStack(alignment: .center, spacing: 10) {
+        VStack(alignment: .center, spacing: 0) {
             Rectangle()
             .foregroundColor(.clear)
             .frame(width: 120, height: 120)
