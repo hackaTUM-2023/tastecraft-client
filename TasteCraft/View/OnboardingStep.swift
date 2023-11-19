@@ -17,6 +17,7 @@ struct OnboardingStep<Content: View>: View {
     let headerTitle: String
     let subtitle: String
     let buttonText: String
+    let onClick: () -> ()
     
     var body: some View {
         VStack(spacing: 35.0) {
@@ -57,7 +58,7 @@ struct OnboardingStep<Content: View>: View {
             Spacer()
             
             Button {
-                // Ihre Logik hier
+                onClick()
             } label: {
                 Text(buttonText)
             }
@@ -97,7 +98,8 @@ struct OnboardingStep<Content: View>: View {
                 },
                 headerTitle: "Header",
                 subtitle: "Descriptive Text",
-                buttonText: "Continue"
+                buttonText: "Continue", 
+                onClick: {}
             )
         }
     }

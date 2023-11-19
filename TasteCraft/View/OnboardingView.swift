@@ -8,7 +8,14 @@
 import SwiftUI
 import WrappingHStack
 
+enum OnboardingSteps {
+    case firstStep
+    case secondStep
+    case finished
+}
+
 struct OnboardingView: View {
+    @Binding var currentOnboardingStep: OnboardingSteps
     @State var dietaryNeeds: [(label: String, isActive: Bool)] = [
         ("Vegetarian", false),
         ("Vegan", false),
@@ -18,72 +25,81 @@ struct OnboardingView: View {
         ("Keto", false),
         ("Diabetic-Friendly", false)
     ]
+    @State var unwantedIngredients: [(label: String, isActive: Bool)] = [
+        ("Nuts", false),
+        ("Soy", false),
+        ("Seafood", false),
+        ("Sesame", false),
+        ("Mustard", false),
+        ("Sulfites", false),
+        ("Tomatos", false)
+    ]
     @State var input: String = ""
     
     @ViewBuilder
-    private var image: some View {
+    private var image1: some View {
         Image("Whisk")
             .resizable()
             .scaledToFit()
             .frame(height: 200.0)
     }
     
+    @ViewBuilder
+    private var image2: some View {
+        Image("ThumbsDown")
+            .resizable()
+            .scaledToFit()
+            .frame(height: 140.0)
+            .padding(.vertical, 32.0)
+    }
+    
     var body: some View {
-        VStack(spacing: 35.0) {
-            VStack(spacing: 0) {
-                image
-                
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Craft your culinary experience!")
-                        .font(
-                            Font.custom("Montserrat", size: 24)
-                                .weight(.bold)
-                        )
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color("Black"))
-                        .frame(maxWidth: .infinity, alignment: .top)
-                    
-                    Text("Please select your dietary needs")
-                        .font(
-                            Font.custom("Montserrat", size: 12)
-                                .weight(.semibold)
-                        )
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color("Grey"))
-                        .frame(maxWidth: .infinity, alignment: .top)
-                }
-                .frame(width: 248, alignment: .bottomLeading)
-            }
-            
-            
-            WrappingHStack(dietaryNeeds, id: \.self, alignment: .center, spacing: .constant(10), lineSpacing: 10) { need in
-                Tag(isActive: need.isActive, label: need.label)
-            }
-            .padding(.horizontal, 30)
-            .padding(.vertical, 0)
-            .frame(width: 393, alignment: .center)
-            
-            TagInput(
+        if currentOnboardingStep == OnboardingSteps.firstStep {
+            OnboardingStep(
+                tagInput: $dietaryNeeds,
                 input: $input,
-                onSubmit: {
-                    dietaryNeeds.append((label: input, isActive: true))
+                image: {
+                    image1
+                },
+                headerTitle: "Craft your culinary experience!",
+                subtitle: "Please select your dietary needs",
+                buttonText: "Continue",
+                onClick: {
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        input = ""
+                        currentOnboardingStep = .secondStep
+                    }
                 }
-            )
-            .padding(.horizontal, 80.0)
-            
-            Spacer()
-            
-            Button {
-               
-            } label: {
-                Text("Continue")
-            }
-            .buttonStyle(CustomButtonStyle())
-            .padding(.horizontal, 30.0)
+            ).transition(.push(from: .trailing))
+        } else {
+            OnboardingStep(
+                tagInput: $unwantedIngredients,
+                input: $input,
+                image: {
+                    image2
+                },
+                headerTitle: "Select Your Ingredients Wisely!",
+                subtitle: "Choose the ingredients you want to avoid",
+                buttonText: "Create My Flavor World",
+                onClick: {
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        input = ""
+                        currentOnboardingStep = .finished
+                    }
+                }
+            ).transition(.push(from: .trailing))
         }
     }
 }
 
 #Preview {
-    OnboardingView()
+    struct Preview: View {
+        @State var currentOnboardingStep: OnboardingSteps = .firstStep
+        
+        var body: some View {
+            OnboardingView(currentOnboardingStep: $currentOnboardingStep)
+        }
+    }
+
+    return Preview()
 }
