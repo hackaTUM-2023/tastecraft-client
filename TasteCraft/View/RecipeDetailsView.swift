@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeDetailsView: View {
     @EnvironmentObject var recipeViewModel: RecipeViewModel
+    @State var selectedIngredients: [Ingredient] = []
     
     func formatDouble(value: Double) -> String {
         let formatter = NumberFormatter()
@@ -107,29 +108,60 @@ struct RecipeDetailsView: View {
                 // Ingredients
                 Tag(isActive: true, disabled: true, label: "Ingredients")
                 ForEach(Array(recipeViewModel.recipe.ingredients.keys), id: \.self) { ingredient in
-                    HStack {
-                        Text("\(ingredient.name)")
-                            .font(
-                              Font.custom("Montserrat", size: 16)
-                                .weight(.bold)
-                            )
-                        Spacer()
-                        if let amount = recipeViewModel.recipe.ingredients[ingredient] {
-                            HStack {
-                                Text(formatDouble(value: amount.value))
-                                    .font(
-                                        Font.custom("Montserrat", size: 14)
-                                    )
-                                    .foregroundStyle(Color("Grey"))
-                                Text("\(amount.unit)")
-                                    .font(
-                                        Font.custom("Montserrat", size: 14)
-                                    )
-                                    .foregroundStyle(Color("Grey"))
+                    Button(action: {
+                        if selectedIngredients.contains(where: {elem in return elem.name == ingredient.name}) {
+                            selectedIngredients.removeAll(where: {elem in return elem.name == ingredient.name})
+                        } else {
+                            selectedIngredients.append(ingredient)
+                        }
+                    }, label: {
+                        HStack {
+                            Text("\(ingredient.name)")
+                                .font(
+                                  Font.custom("Montserrat", size: 16)
+                                    .weight(.bold)
+                                )
+                                .foregroundStyle(selectedIngredients.contains(where: {elem in return elem.name == ingredient.name}) ? Color("HelloFresh Green Light") : Color("Black"))
+                            Spacer()
+                            if let amount = recipeViewModel.recipe.ingredients[ingredient] {
+                                HStack {
+                                    Text(formatDouble(value: amount.value))
+                                        .font(
+                                            Font.custom("Montserrat", size: 14)
+                                        )
+                                        .foregroundStyle(Color("Grey"))
+                                    Text("\(amount.unit)")
+                                        .font(
+                                            Font.custom("Montserrat", size: 14)
+                                        )
+                                        .foregroundStyle(Color("Grey"))
+                                }
+                            }
+                        }.frame(width: 260, alignment: .top)
+                    })
+                }
+                
+                // Button
+                Button {
+                    selectedIngredients.forEach({ selectedIngredient in
+                        var keyOptional = recipeViewModel.recipe.ingredients.keys.first(where: { k in
+                            return k.name == selectedIngredient.name
+                        })
+                        
+                        if let key = keyOptional {
+                            var val = recipeViewModel.recipe.ingredients[key]
+                            if let substitute = replacement_ingredients[key.name], let v = val {
+                                recipeViewModel.recipe.ingredients.removeValue(forKey: key)
+                                recipeViewModel.recipe.ingredients[Ingredient(name: substitute)] = v
                             }
                         }
-                    }.frame(width: 260, alignment: .top)
+                    })
+                } label: {
+                    Text("Generate New")
                 }
+                .buttonStyle(CustomButtonStyle(disabled: selectedIngredients.isEmpty))
+                .disabled(selectedIngredients.isEmpty)
+                .padding(.horizontal, 30.0)
             }
         }
     }

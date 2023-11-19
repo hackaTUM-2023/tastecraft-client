@@ -6,6 +6,12 @@
 //
 
 struct Ingredient: Codable, Hashable {
-    var id: Int
+    var id: Int?
     var name: String
 }
+
+
+var replacement_ingredients: [String: String] = [
+    "Tomato sauce": "Creamy White Sauce",
+    "Garlic" : "Mild Onions"
+]

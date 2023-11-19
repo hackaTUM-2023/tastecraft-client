@@ -107,7 +107,7 @@ struct RecipeOverview: View {
                                   .padding(.horizontal, 20)
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     LazyHStack {
-                                        ForEach(filteredResults, id: \.self) { recipe in
+                                        ForEach(filteredResults.shuffled(), id: \.self) { recipe in
                                             NavigationLink {
                                                 RecipeDetailsView()
                                                     .environmentObject(RecipeViewModel(recipe: recipe))
