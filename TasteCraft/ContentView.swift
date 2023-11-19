@@ -10,18 +10,19 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var launchScreenState: LaunchScreenStateManager
     
+    @State var currentOnboardingStep: OnboardingSteps = .firstStep
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if currentOnboardingStep != .finished {
+            OnboardingView(currentOnboardingStep: $currentOnboardingStep)
+                .task {
+                    try? await Task.sleep(for: Duration.seconds(1))
+                    self.launchScreenState.dismiss()
+                }
+        } else {
+            Text("HomeView")
         }
-        .padding()
-        .task {
-            try? await Task.sleep(for: Duration.seconds(1))
-            self.launchScreenState.dismiss()
-        }
+        
     }
 }
 

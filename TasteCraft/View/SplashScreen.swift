@@ -15,7 +15,7 @@ struct SplashScreen: View {
     @State private var startFadeoutAnimation = false
     
     @ViewBuilder
-    private var image: some View {
+    private var logo: some View {
         Image("TasteCraft-Logo")
             .resizable()
             .scaledToFit()
@@ -35,7 +35,7 @@ struct SplashScreen: View {
         ZStack {
             backgroundColor
             VStack(spacing: 35.0) {
-                image
+                logo
                 VStack {
                     Text("Welcome to")
                     Text("TasteCraft")
